@@ -138,8 +138,14 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           if (isMenuVisible)
-            const Positioned(
-                left: 0, right: 0, bottom: 0, child: FilterWidget())
+            Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: FilterWidget(
+                onDismiss: toggleMenuVisibility,
+              ),
+            )
         ],
       ),
     );

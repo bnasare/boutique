@@ -5,27 +5,18 @@ import 'package:flutter/material.dart';
 import '../consts/product_consts.dart';
 
 class FilterWidget extends StatefulWidget {
-  const FilterWidget({super.key});
+  final VoidCallback onDismiss;
+
+  const FilterWidget({
+    super.key,
+    required this.onDismiss,
+  });
 
   @override
-  State<FilterWidget> createState() => _FilterWidgetState();
+  _FilterWidgetState createState() => _FilterWidgetState();
 }
 
 class _FilterWidgetState extends State<FilterWidget> {
-  bool isMenuVisible = false;
-
-  void toggleMenuVisibility() {
-    setState(() {
-      isMenuVisible = !isMenuVisible;
-    });
-  }
-
-  void dismissMenu() {
-    if (isMenuVisible) {
-      toggleMenuVisibility();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return BackdropFilter(
@@ -46,7 +37,9 @@ class _FilterWidgetState extends State<FilterWidget> {
               child: Padding(
                 padding: const EdgeInsets.only(right: 15.0, top: 15),
                 child: GestureDetector(
-                  onTap: dismissMenu,
+                  onTap: () {
+                    widget.onDismiss(); // Call the onDismiss callback
+                  },
                   child: Icon(
                     Icons.close,
                     color: Theme.of(context).colorScheme.secondary,
