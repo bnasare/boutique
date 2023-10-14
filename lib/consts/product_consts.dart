@@ -90,3 +90,18 @@ final List<String> brandText = [
   'H&M',
   'Polo',
 ];
+
+final List<String> sizeTexts = [
+  'Small',
+  'Medium',
+  'Large',
+  'Extra Large',
+  'Custom Size',
+];
+
+List<String> images = [
+  'assets/images/onboarding_5.jpeg',
+  'assets/images/onboarding_5.jpeg',
+  'assets/images/onboarding_5.jpeg',
+  'assets/images/onboarding_5.jpeg',
+];

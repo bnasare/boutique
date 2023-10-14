@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../consts/product_consts.dart';
+
 class ProductDetails extends StatefulWidget {
   static const routeName = '/prodDetails';
   const ProductDetails({super.key});
@@ -9,22 +11,8 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
-  List<String> images = [
-    'assets/images/onboarding_5.jpeg',
-    'assets/images/onboarding_5.jpeg',
-    'assets/images/onboarding_5.jpeg',
-    'assets/images/onboarding_5.jpeg',
-  ];
   final PageController pageController = PageController();
   int current = 0;
-
-  final List<String> containerTexts = [
-    'Small',
-    'Medium',
-    'Large',
-    'Extra Large',
-    'Custom Size',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -203,7 +191,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     Expanded(
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        itemCount: containerTexts.length,
+                        itemCount: sizeTexts.length,
                         itemBuilder: (context, index) {
                           return Container(
                             padding: const EdgeInsets.symmetric(
@@ -212,16 +200,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                               top: 18,
                               bottom: 18,
                               left: index == 0 ? 20.0 : 0.0,
-                              right: index == containerTexts.length - 1
-                                  ? 20.0
-                                  : 10.0,
+                              right:
+                                  index == sizeTexts.length - 1 ? 20.0 : 10.0,
                             ),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(7),
                                 border: Border.all(color: Colors.grey[300]!)),
                             alignment: Alignment.center,
                             child: Text(
-                              containerTexts[index],
+                              sizeTexts[index],
                               style: Theme.of(context)
                                   .textTheme
                                   .bodySmall
