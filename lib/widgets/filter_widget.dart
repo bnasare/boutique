@@ -38,7 +38,7 @@ class _FilterWidgetState extends State<FilterWidget> {
                 padding: const EdgeInsets.only(right: 15.0, top: 15),
                 child: GestureDetector(
                   onTap: () {
-                    widget.onDismiss(); // Call the onDismiss callback
+                    widget.onDismiss();
                   },
                   child: Icon(
                     Icons.close,

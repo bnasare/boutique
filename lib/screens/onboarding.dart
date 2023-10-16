@@ -9,79 +9,71 @@ class Onboarding extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Column(
-            children: [
-              Expanded(
-                child: Stack(
-                  children: [
-                    Positioned(
-                      top: 0,
-                      left: 35,
-                      child: Container(
-                        height: 250,
-                        width: 180,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(13.0),
-                          image: const DecorationImage(
-                            image:
-                                AssetImage('assets/images/onboarding_4.jpeg'),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
+          Expanded(
+            child: Stack(
+              children: [
+                Positioned(
+                  top: 0,
+                  left: 35,
+                  child: Container(
+                    height: 250,
+                    width: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(13.0),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/onboarding_4.jpeg'),
+                        fit: BoxFit.fill,
                       ),
                     ),
-                    Positioned(
-                      top: 280,
-                      right: 230,
-                      child: Container(
-                        height: 280,
-                        width: 230,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          image: const DecorationImage(
-                            image:
-                                AssetImage('assets/images/onboarding_2.jpeg'),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 500,
-                      left: 250,
-                      child: Container(
-                        height: 280,
-                        width: 230,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          image: const DecorationImage(
-                            image:
-                                AssetImage('assets/images/onboarding_3.jpeg'),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 230,
-                      left: 200,
-                      child: Container(
-                        height: 250,
-                        width: 230,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          image: const DecorationImage(
-                            image:
-                                AssetImage('assets/images/onboarding_1.jpeg'),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            ],
+                Positioned(
+                  top: 280,
+                  right: 230,
+                  child: Container(
+                    height: 280,
+                    width: 230,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/onboarding_2.jpeg'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: 500,
+                  left: 250,
+                  child: Container(
+                    height: 280,
+                    width: 230,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/onboarding_3.jpeg'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: 230,
+                  left: 200,
+                  child: Container(
+                    height: 250,
+                    width: 230,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/onboarding_1.jpeg'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           Positioned(
             bottom: 0,

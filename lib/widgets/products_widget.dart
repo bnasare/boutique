@@ -19,46 +19,44 @@ class ProductWidget extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, ProductDetails.routeName);
       },
-      child: SizedBox(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: double.infinity,
-              height: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(imgPath),
-                ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: double.infinity,
+            height: 200,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(7),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(imgPath),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10.0),
-              child: Text(
-                prodName,
-                maxLines: 1,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Theme.of(context).colorScheme.secondary,
-                    letterSpacing: 0.001,
-                    fontSize: 18),
-              ),
-            ),
-            Text(
-              brand,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  letterSpacing: 0.001, color: Colors.grey[500], fontSize: 14),
-            ),
-            Text(
-              '\$ ${price.toStringAsFixed(2)}',
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Text(
+              prodName,
+              maxLines: 1,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: Theme.of(context).colorScheme.secondary,
                   letterSpacing: 0.001,
                   fontSize: 18),
             ),
-          ],
-        ),
+          ),
+          Text(
+            brand,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                letterSpacing: 0.001, color: Colors.grey[500], fontSize: 14),
+          ),
+          Text(
+            '\$ ${price.toStringAsFixed(2)}',
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: Theme.of(context).colorScheme.secondary,
+                letterSpacing: 0.001,
+                fontSize: 18),
+          ),
+        ],
       ),
     );
   }
